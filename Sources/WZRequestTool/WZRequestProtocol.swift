@@ -5,7 +5,7 @@
 //  Created by mntechMac on 2021/11/19.
 //
 
-import Foundation
+import UIKit
 import Alamofire
 
 
@@ -67,7 +67,7 @@ extension WZRequestProtocol {
             
             debugPrint("-------  \(Thread.current) ------- is Main \(Thread.current.isMainThread)")
             if shouldCache, let key = cacheKey {
-                ATCache.shared.dataCaches.setObject(data as NSData, forKey: key)
+                WZRequestCache.shared.dataCaches.setObject(data as NSData, forKey: key)
             }
             
             if DT.self == [String: Any].self {
@@ -100,7 +100,7 @@ extension WZRequestProtocol {
         
         let AFRequest = AF.request(r.base + r.path, method: r.method, parameters: r.params, encoding: r.encoding, headers: HTTPHeaders(r.header))
         let key = AFRequest.convertible.urlRequest?.url?.absoluteString as NSString?
-        if shouldCache, let k = key, let cache = ATCache.shared.dataCaches.object(forKey: k) {
+        if shouldCache, let k = key, let cache = WZRequestCache.shared.dataCaches.object(forKey: k) {
             completeHandler(cache as Data, success, k, false)
         } else {
             AFRequest.responseData(queue: .global()) { data in
