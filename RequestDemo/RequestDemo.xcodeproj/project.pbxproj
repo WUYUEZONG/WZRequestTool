@@ -13,7 +13,6 @@
 		CCCB740827473730001673A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCB740627473730001673A9 /* Main.storyboard */; };
 		CCCB740A27473733001673A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCB740927473733001673A9 /* Assets.xcassets */; };
 		CCCB740D27473733001673A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCB740B27473733001673A9 /* LaunchScreen.storyboard */; };
-		CCCB741E27473D10001673A9 /* WZRequestTool in Frameworks */ = {isa = PBXBuildFile; productRef = CCCB741D27473D10001673A9 /* WZRequestTool */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCCB741E27473D10001673A9 /* WZRequestTool in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +92,6 @@
 			);
 			name = RequestDemo;
 			packageProductDependencies = (
-				CCCB741D27473D10001673A9 /* WZRequestTool */,
 			);
 			productName = RequestDemo;
 			productReference = CCCB73FD27473730001673A9 /* RequestDemo.app */;
@@ -125,7 +122,6 @@
 			);
 			mainGroup = CCCB73F427473730001673A9;
 			packageReferences = (
-				CCCB741C27473D10001673A9 /* XCRemoteSwiftPackageReference "WZRequestTool" */,
 			);
 			productRefGroup = CCCB73FE27473730001673A9 /* Products */;
 			projectDirPath = "";
@@ -374,25 +370,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		CCCB741C27473D10001673A9 /* XCRemoteSwiftPackageReference "WZRequestTool" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://gitee.com/rn-wyz/WZRequestTool.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		CCCB741D27473D10001673A9 /* WZRequestTool */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CCCB741C27473D10001673A9 /* XCRemoteSwiftPackageReference "WZRequestTool" */;
-			productName = WZRequestTool;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CCCB73F527473730001673A9 /* Project object */;
 }
