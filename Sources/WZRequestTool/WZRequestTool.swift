@@ -1,9 +1,6 @@
 
 
 
-import Foundation
-import Alamofire
-
 /// - Tool: target Type, about your request service
 /// - DataType: type of your request`s response data type
 ///
