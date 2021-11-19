@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 
-protocol WZRequestProtocol {
+public protocol WZRequestProtocol {
     
     associatedtype T: WZRequestDelegate
     
@@ -62,7 +62,7 @@ protocol WZRequestProtocol {
 
 extension WZRequestProtocol {
     
-    static var completeHandler: (Data, @escaping (DT)->(), NSString?, Bool) -> Void {
+    public static var completeHandler: (Data, @escaping (DT)->(), NSString?, Bool) -> Void {
         { data, success, cacheKey, shouldCache in
             
             debugPrint("-------  \(Thread.current) ------- is Main \(Thread.current.isMainThread)")
@@ -94,7 +94,7 @@ extension WZRequestProtocol {
         }
     }
     
-    static func request(target: T, _ shouldCache: Bool = false, success:@escaping ((DT)->()), fail:@escaping ((AFError)->())) {
+    public static func request(target: T, _ shouldCache: Bool = false, success:@escaping ((DT)->()), fail:@escaping ((AFError)->())) {
         
         let r = target.request
         

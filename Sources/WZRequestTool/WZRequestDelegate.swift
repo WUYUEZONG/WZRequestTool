@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-protocol WZRequestDelegate {
+public protocol WZRequestDelegate {
     
     /// - base: 域名，如：https://www.wyz.com
     /// - path: 路径

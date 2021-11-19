@@ -7,7 +7,7 @@
 
 import Foundation
 
-class WZRequestCache: NSCache<NSString, NSData> {
+open class WZRequestCache: NSCache<NSString, NSData> {
     
     static let shared = WZRequestCache()
     
