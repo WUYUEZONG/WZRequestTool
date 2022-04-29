@@ -42,6 +42,8 @@ class ViewController: UIViewController {
         } fail: { error in
             
         }
+        
+        WZRequestTool<DemoService, [String: Any]>.request(target: .demoRequest, true, success: nil, fail: nil)
 
         
     }

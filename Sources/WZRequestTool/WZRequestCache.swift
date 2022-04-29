@@ -13,7 +13,7 @@ open class WZRequestCache: NSCache<NSString, NSData> {
     
     lazy var dataCaches: NSCache<NSString, NSData> = {
         let c = NSCache<NSString, NSData>()
-        c.name = "ATCacheDataCaches"
+        c.name = "WZCacheDataCaches"
         c.countLimit = 20
         return c
     }()
