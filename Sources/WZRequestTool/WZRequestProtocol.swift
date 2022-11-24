@@ -5,7 +5,7 @@
 //  Created by mntechMac on 2021/11/19.
 //
 
-import UIKit
+import Foundation
 import Alamofire
 
 
@@ -85,12 +85,12 @@ extension WZRequestProtocol {
                 }
             }
             
-            if DT.self == UIImage.self {
-                let image = UIImage(data: data)
-                DispatchQueue.main.async {
-                    success(image as! Self.DT)
-                }
-            }
+//            if DT.self == UIImage.self {
+//                let image = UIImage(data: data)
+//                DispatchQueue.main.async {
+//                    success(image as! Self.DT)
+//                }
+//            }
         }
     }
     
